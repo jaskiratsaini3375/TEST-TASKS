@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 4</title>
+</head>
+
+<body>
+
+    <script>
+
+        let str1 = "silent";
+        let str2 = "listen";
+
+        function checkAnagram(str1, str2) {
+
+            if (str1.length !== str2.length) {
+                return false
+            }
+
+            const arr1 = Array.from(str1);
+            const arr2 = Array.from(str2);
+
+            for (let i = 0; i < arr1.length; i++) {
+                for (let j = 0; j < arr1.length; j++) {
+                    if (arr1[j] > arr1[j + 1]) {
+                        let temp = arr1[j];
+                        arr1[j] = arr1[j + 1];
+                        arr1[j + 1] = temp;
+                    }
+                }
+            }
+
+            for (let i = 0; i < arr2.length; i++) {
+                for (let j = 0; j < arr2.length; j++) {
+                    if (arr2[j] > arr2[j + 1]) {
+                        let temp = arr2[j];
+                        arr2[j] = arr2[j + 1];
+                        arr2[j + 1] = temp;
+                    }
+                }
+            }
+
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) {
+                    return false
+                }
+            }
+
+            return true;
+        }
+
+        console.log(checkAnagram(str1, str2))
+
+
+
+    </script>
+
+</body>
+
+</html>

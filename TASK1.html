@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 1</title>
+</head>
+<body>
+
+    <script>
+
+        const array = [12, 32, 34, 54, 67, 55, 66, 78, 65, 44, 33, 23, 89, 76, 43, 23, 12321, 343, 767, 787, 13, 141, 212, 454, 60, 90, 88, 76];
+
+        function isPalindrome(arr) {
+    const str = arr.toString();
+    const length = str.length;
+    for (let i = 0; i < Math.floor(length / 2); i++) {
+        if (str[i] !== str[length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function findPalindrome(array) {
+    const resultArr = [];
+    for (let i = 0; i < array.length; i++) {
+        if (isPalindrome(array[i])) {
+            resultArr.push(array[i]);
+        }
+    }
+    return resultArr;
+}
+
+const palindromeNumbers = findPalindrome(array);
+console.log(palindromeNumbers);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 3</title>
+</head>
+
+<body>
+
+    <script>
+
+        const arr = ['J', 'Z', 'D', 'Q', 'L', 'W', 'A', 'H', 'Y', 'K', 'G', 'N', 'V', 'R', 'P', 'X', 'C', 'M', 'F', 'O', 'U', 'S', 'I', 'E', 'T', 'B'];
+
+        const vowels = ['a', 'i', 'o', 'u', 'e'];
+
+        const newArr = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            const char = arr[i].toLowerCase()
+            if (vowels.includes(char)) {
+                newArr.push(char)
+            }
+        }
+
+        console.log(newArr)
+
+    </script>
+
+</body>
+
+</html>
